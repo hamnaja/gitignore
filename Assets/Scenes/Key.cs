@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-
-public class Box : MonoBehaviour
+public class Key : MonoBehaviour
 {
+    // Start is called before the first frame update
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
@@ -13,8 +13,7 @@ public class Box : MonoBehaviour
             gameObject.SetActive(false);
 
             PlayerController player = GameObject.FindAnyObjectByType<PlayerController>();
-            player.AddScore();
+            player.AddKey();
         }
-
     }
 }

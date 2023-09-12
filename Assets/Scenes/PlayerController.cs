@@ -21,6 +21,10 @@ public class PlayerController : MonoBehaviour
     {
         return score;
     }
+    public int GetScoreKey()
+    {
+        return key;
+    }
     void Start()
     {
         rb= GetComponent<Rigidbody>();

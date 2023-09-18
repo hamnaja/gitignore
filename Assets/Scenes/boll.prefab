@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3957037599120823172}
   - component: {fileID: 3957037599120823175}
   m_Layer: 0
-  m_Name: New Prefab
+  m_Name: boll
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

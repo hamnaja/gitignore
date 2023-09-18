@@ -1,21 +1,22 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SocialPlatforms.Impl;
 
 public class PlayerController : MonoBehaviour
 {
-    [SerializeField] private float rotationSpeed = 100f;
+    [SerializeField]private float rotationSpeed = 100f;
     private Rigidbody rb;
     [SerializeField] private int score = 0;
     [SerializeField] private int key = 0;
+    [SerializeField] private AudioSource Source;
     public void AddScore()
     {
-    score = score +1;
+        Source.Play();
+        score = score + 1;
     }
     public void AddKey()
     {
-        key = key +1;
+        key = key + 1;
     }
     public int GetScore()
     {
@@ -25,6 +26,7 @@ public class PlayerController : MonoBehaviour
     {
         return key;
     }
+   
     void Start()
     {
         rb= GetComponent<Rigidbody>();

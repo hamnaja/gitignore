@@ -1,35 +1,42 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
+using static Unity.VisualScripting.Member;
 
 public class PlayerController : MonoBehaviour
 {
     [SerializeField]private float rotationSpeed = 100f;
     private Rigidbody rb;
-    [SerializeField] private int score = 0;
-    [SerializeField] private int key = 0;
-    [SerializeField] private AudioSource Source;
+    [SerializeField] private AudioSource audioSource;
+    [SerializeField] private AudioSFX audioSFX;
+    [SerializeField] private PlayerData playerData;
     public void AddScore()
     {
-        Source.Play();
-        score = score + 1;
+        
+        playerData.score = playerData.score + 1;
+        audioSource.Play();
+        
     }
     public void AddKey()
     {
-        key = key + 1;
+        playerData.key = playerData.key + 1;
     }
     public int GetScore()
     {
-        return score;
+        return playerData.score;
     }
     public int GetScoreKey()
     {
-        return key;
+        return playerData.key;
     }
    
     void Start()
     {
         rb= GetComponent<Rigidbody>();
+
+        audioSource = GetComponent<AudioSource>();
+        audioSource.clip = audioSFX.audioClip;
 
     }
 

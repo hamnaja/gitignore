@@ -9,7 +9,19 @@ public class manu : MonoBehaviour
     {
         SceneManager.LoadScene(1);
     }
-    public void OnQuitButton()
+    public void Leve1Button()
+    {
+        SceneManager.LoadScene(2);
+    }
+    public void Leve2Button()
+    {
+        SceneManager.LoadScene(3);
+    }
+    public void OnQuit2Button()
+    {
+        SceneManager.LoadScene(0);
+    }
+    public void OnQuit1Button()
     {
         Application.Quit();
     }

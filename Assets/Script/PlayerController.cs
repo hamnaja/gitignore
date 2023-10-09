@@ -21,6 +21,7 @@ public class PlayerController : MonoBehaviour
     public void AddKey()
     {
         playerData.key = playerData.key + 1;
+        audioSource.Play();
     }
     public int GetScore()
     {

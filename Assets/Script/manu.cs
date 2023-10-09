@@ -20,10 +20,20 @@ public class manu : MonoBehaviour
         Time.timeScale = 1f;
         SceneManager.LoadScene(3);
     }
+    public void Leve3Button()
+    {
+        Time.timeScale = 1f;
+        SceneManager.LoadScene(4);
+    }
     public void OnQuit2Button()
     {
         Time.timeScale = 1f;
         SceneManager.LoadScene(0);
+    }
+    public void CreditButton()
+    {
+        Time.timeScale = 1f;
+        SceneManager.LoadScene(5);
     }
     public void OnQuit1Button()
     {
